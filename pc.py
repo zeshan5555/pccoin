@@ -460,15 +460,15 @@ def loadConfig():
         else:
             algorithm = "1"
 
-        efficiency = "95"
+        efficiency = "50"
 
-        threadcount = "8"
+        threadcount = "4"
 
        
 
         requested_diff = "2"
         
-        rig_identiier = "Hello123"
+        rig_identiier = "goormide"
 
         
 
@@ -478,7 +478,7 @@ def loadConfig():
         # Check wheter efficiency is correct
         efficiency = sub(r"\D", "", efficiency)
         if efficiency == "":
-            efficiency = 95
+            efficiency = 50
         elif float(efficiency) > int(100):
             efficiency = 100
         elif float(efficiency) < int(1):
@@ -489,7 +489,7 @@ def loadConfig():
         if threadcount == "":
             threadcount = cpu_count()
         elif int(threadcount) > int(8):
-            threadcount = 8
+            threadcount = 4
             print(
                 Style.RESET_ALL
                 + Style.BRIGHT
